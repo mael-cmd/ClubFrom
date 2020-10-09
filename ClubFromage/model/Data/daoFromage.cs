@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClubFromage
+using ClubFromage.model.Data;
+using ClubFromage.model.Business;
+
+namespace ClubFromage.model.Data
 {
     class daoFromage
     {

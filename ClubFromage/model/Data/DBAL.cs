@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
-
-namespace ClubFromage
+using ClubFromage.model.Data;
+using ClubFromage.model.Business;
+namespace ClubFromage.model.Data
 {
     class DBAL
     {

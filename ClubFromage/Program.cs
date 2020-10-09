@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using ClubFromage.model.Data;
+using ClubFromage.model.Business;
 
 namespace ClubFromage
 {

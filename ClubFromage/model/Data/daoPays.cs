@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using CsvHelper;
 using System.Globalization;
 using Ubiety.Dns.Core.Records;
+using ClubFromage.model.Data;
+using ClubFromage.model.Business;
 
 namespace ClubFromage
 {
