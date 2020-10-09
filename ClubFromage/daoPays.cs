@@ -18,15 +18,15 @@ namespace ClubFromage
         {
             _DBAL = unDBAL;
         }
+
         public void Insert(Pays unPays)
         {
-            string query = "Pays VALUES " + "(" + unPays.getIdPays() + ",'" + unPays.getNom() + "');";
+            string query = " Pays VALUES " + "(" + unPays.getIdPays() + ",'" + unPays.nom.Replace("'", "''") + "');";
             this._DBAL.Insert(query);
         }
-
         public void Update(Pays unPays)
         {
-            string query = "Pays SET idPays = " + unPays.getIdPays() + ", nom = '" + unPays.getNom() + "' WHERE idPays = " + unPays.getIdPays()+" ;";
+            string query = "Pays SET idPays = " + unPays.getIdPays() + ", nom = '" + unPays.getNom().Replace("'", "''") + "' WHERE idPays = " + unPays.getIdPays() + " ;";
             this._DBAL.Update(query);
         }
 
@@ -47,9 +47,9 @@ namespace ClubFromage
 
                 var record = new Pays();
                 var records = csv.EnumerateRecords(record);
-                foreach (Pays p in records)
+                foreach (Pays pays in records)
                 {
-                    Insert(p);
+                    Insert(pays);
                 }
             }
         }

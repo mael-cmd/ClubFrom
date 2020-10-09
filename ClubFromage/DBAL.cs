@@ -25,7 +25,7 @@ namespace ClubFromage
         private void Initialize()
         {
             server = "localhost";
-            database = "Club_Fromage";
+            database = "ClubFromage";
             uid = "root";
             password = "5MichelAnnecy";
             string connectionString;

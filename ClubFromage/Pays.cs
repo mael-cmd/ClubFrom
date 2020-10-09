@@ -23,28 +23,31 @@ namespace ClubFromage
         {
             _idPays = unIdPays;
             _nom = unNomPays;
-
         }
+
+        public int idPays { get => _idPays; set => _idPays = value; }
+        public string nom { get => _nom; set => _nom = value; }
+
 
         public int getIdPays()
         {
-            return _idPays;
+            return idPays;
 
         }
 
         public string getNom()
         {
-            return _nom;
+            return nom;
         }
 
         public void setIdPays(int unIdPays)
         {
-            _idPays = unIdPays;
+            idPays = unIdPays;
         }
 
         public void setNom(string unNom)
         {
-            _nom = unNom;
+            nom = unNom;
         }
     }
 }

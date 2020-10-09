@@ -23,7 +23,7 @@ namespace ClubFromage
             //clubfromage.Delete(requetesql);
 
             requetesql = " Pays VALUES (1,'France');";
-            requetesql = "SELECT * FROM Pays;";
+            requetesql = "delete * FROM Pays;";
             requetesql = " Pays SET nom = 'Brezil' WHERE idPays=1 ;";
             requetesql = " Pays WHERE idPays = 1;";
             //clubfromage.Delete(reque
@@ -37,11 +37,10 @@ namespace ClubFromage
             ///DateTime DureeAffinage = new DateTime(0, 0, 0, 15, 0, 0);
             ///DateTime DateCreation = new DateTime(2000, 5, 25);
             ///Fromage camenbert = new Fromage(15, 4, "camenbert", DureeAffinage,DateCreation, "le lait ...", "un laitier ...");
-            //undaoPays.Delete(unPays);
+            undaoPays.Delete(unPays);
             unPays.setNom("France");
             undaoPays.Update(unPays);
             ///undaofromage.Insert(camenbert);
-
             undaoPays.InsertByFile("D:\\Maël\\ClubFrom\\ClubFromage\\bin\\Debug\\pays.csv");
         }
     }
