@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using ClubFromage.model.Data;
 using ClubFromage.model.Business;
+using System.Data;
+
 namespace ClubFromage.model.Data
 {
     class DBAL
@@ -187,6 +189,32 @@ namespace ClubFromage.model.Data
             }
         }
 
-        
+
+        public DataSet RQuery(string query)
+        {
+            DataSet dataset = new DataSet();
+            //if (this.OpenConnection() == true)
+            //{
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                adapter.Fill(dataset);
+            //}
+            return dataset;
+        }
+
+        public DataTable SelectAll(string table)
+        {
+            return this.RQuery("select * from " + table).Tables[0];
+        }
+        public DataTable SelectByField(string table, string fieldTestCondition)
+        {
+            return this.RQuery("select * from " + table + " where " + fieldTestCondition).Tables[0];
+        }
+
+        public DataRow SelectById(string table, int id)
+        {
+            return this.RQuery("select * from " + table + " where idPays = " + id).Tables[0].Rows[0];
+        }
+
+
     }
 }
